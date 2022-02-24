@@ -13,7 +13,7 @@ class ConnMySql {
         Class.forName("com.mysql.jdbc.Driver");
          
         Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://127.0.0.1:3306/db_companyinfo",
+                "jdbc:mysql://127.0.0.1:3306/parking",
                 "root","123456");
         Statement stmt =  conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from t_admin");
