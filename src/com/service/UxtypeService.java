@@ -14,28 +14,28 @@ public class UxtypeService {
 	private UxtypeDao uxtypeDao;
 
 	public List queryUxtypes(Uxtype record,int page,int rows) {
-		// TODO Auto-generated method stub
+
 		return uxtypeDao.getUxtypeList(record,page,rows);
 	}
 
 	public Uxtype getUxtype(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return uxtypeDao.getUxtypeById(parseInt);
 	}
 
 	public void modifyUxtype(Uxtype uxtype) {
-		// TODO Auto-generated method stub
+
 		uxtypeDao.update(uxtype);
 	}
 
 	public void deleteUxtype(Integer id) {
-		// TODO Auto-generated method stub
+
 		uxtypeDao.delete(id);
 
 	}
 
 	public void save(Uxtype uxtype) {
-		// TODO Auto-generated method stub
+
 		uxtypeDao.add(uxtype);
 
 	}

@@ -14,28 +14,28 @@ public class SjxingtaiService {
 	private SjxingtaiDao sjxingtaiDao;
 
 	public List querySjxingtais(Sjxingtai record,int page,int rows) {
-		// TODO Auto-generated method stub
+
 		return sjxingtaiDao.getSjxingtaiList(record,page,rows);
 	}
 
 	public Sjxingtai getSjxingtai(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return sjxingtaiDao.getSjxingtaiById(parseInt);
 	}
 
 	public void modifySjxingtai(Sjxingtai sjxingtai) {
-		// TODO Auto-generated method stub
+
 		sjxingtaiDao.update(sjxingtai);
 	}
 
 	public void deleteSjxingtai(Integer id) {
-		// TODO Auto-generated method stub
+
 		sjxingtaiDao.delete(id);
 
 	}
 
 	public void save(Sjxingtai sjxingtai) {
-		// TODO Auto-generated method stub
+
 		sjxingtaiDao.add(sjxingtai);
 
 	}

@@ -14,28 +14,28 @@ public class RizhiService {
 	private RizhiDao rizhiDao;
 
 	public List queryRizhis(Rizhi record,int page,int rows) {
-		// TODO Auto-generated method stub
+
 		return rizhiDao.getRizhiList(record,page,rows);
 	}
 
 	public Rizhi getRizhi(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return rizhiDao.getRizhiById(parseInt);
 	}
 
 	public void modifyRizhi(Rizhi rizhi) {
-		// TODO Auto-generated method stub
+
 		rizhiDao.update(rizhi);
 	}
 
 	public void deleteRizhi(Integer id) {
-		// TODO Auto-generated method stub
+
 		rizhiDao.delete(id);
 
 	}
 
 	public void save(Rizhi rizhi) {
-		// TODO Auto-generated method stub
+
 		rizhiDao.add(rizhi);
 
 	}

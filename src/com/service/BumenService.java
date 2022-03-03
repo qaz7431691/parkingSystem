@@ -14,28 +14,28 @@ public class BumenService {
 	private BumenDao bumenDao;
 
 	public List queryBumens(Bumen record,int page,int rows) {
-		// TODO Auto-generated method stub
+
 		return bumenDao.getBumenList(record,page,rows);
 	}
 
 	public Bumen getBumen(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return bumenDao.getBumenById(parseInt);
 	}
 
 	public void modifyBumen(Bumen bumen) {
-		// TODO Auto-generated method stub
+
 		bumenDao.update(bumen);
 	}
 
 	public void deleteBumen(Integer id) {
-		// TODO Auto-generated method stub
+
 		bumenDao.delete(id);
 
 	}
 
 	public void save(Bumen bumen) {
-		// TODO Auto-generated method stub
+
 		bumenDao.add(bumen);
 
 	}

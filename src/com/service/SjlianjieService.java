@@ -14,28 +14,28 @@ public class SjlianjieService {
 	private SjlianjieDao sjlianjieDao;
 
 	public List querySjlianjies(Sjlianjie record,int page,int rows) {
-		// TODO Auto-generated method stub
+
 		return sjlianjieDao.getSjlianjieList(record,page,rows);
 	}
 
 	public Sjlianjie getSjlianjie(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return sjlianjieDao.getSjlianjieById(parseInt);
 	}
 
 	public void modifySjlianjie(Sjlianjie sjlianjie) {
-		// TODO Auto-generated method stub
+
 		sjlianjieDao.update(sjlianjie);
 	}
 
 	public void deleteSjlianjie(Integer id) {
-		// TODO Auto-generated method stub
+
 		sjlianjieDao.delete(id);
 
 	}
 
 	public void save(Sjlianjie sjlianjie) {
-		// TODO Auto-generated method stub
+
 		sjlianjieDao.add(sjlianjie);
 
 	}

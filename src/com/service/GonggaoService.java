@@ -14,28 +14,28 @@ public class GonggaoService {
 	private GonggaoDao gonggaoDao;
 
 	public List queryGonggaos(Gonggao record,int page,int rows, String sdate, String edate) {
-		// TODO Auto-generated method stub
+
 		return gonggaoDao.getGonggaoList(record,page,rows,sdate,edate);
 	}
 
 	public Gonggao getGonggao(int parseInt) {
-		// TODO Auto-generated method stub
+
 		return gonggaoDao.getGonggaoById(parseInt);
 	}
 
 	public void modifyGonggao(Gonggao gonggao) {
-		// TODO Auto-generated method stub
+
 		gonggaoDao.update(gonggao);
 	}
 
 	public void deleteGonggao(Integer id) {
-		// TODO Auto-generated method stub
+
 		gonggaoDao.delete(id);
 
 	}
 
 	public void save(Gonggao gonggao) {
-		// TODO Auto-generated method stub
+
 		gonggaoDao.add(gonggao);
 
 	}
