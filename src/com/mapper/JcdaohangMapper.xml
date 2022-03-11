@@ -35,7 +35,6 @@
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.model.Jcdaohang" >
-
     update t_jcdaohang
     set jcdaohangName = #{jcdaohangName,jdbcType=VARCHAR},
       jcdaohangNeirong = #{jcdaohangNeirong,jdbcType=VARCHAR},

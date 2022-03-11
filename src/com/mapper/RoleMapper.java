@@ -2,7 +2,6 @@ package com.mapper;
 
 import com.model.Role;
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
 
 public interface RoleMapper {

@@ -30,7 +30,6 @@ public class JcdaohangAction {
 		response.setCharacterEncoding("UTF-8");
 		try {
 			JSONObject result = new JSONObject();
-
 			String jcdaohangName = (String) request.getParameter("jcdaohangName");
 			String jcdaohangNeirong = (String) request.getParameter("jcdaohangNeirong");
 			String jcdaohangMark = (String) request.getParameter("jcdaohangMark");
@@ -43,7 +42,6 @@ public class JcdaohangAction {
 			String jcbiaotiId = (String) request.getParameter("jcbiaotiId");
 			String jcdaohangId = (String) request.getParameter("jcdaohangId");
 			Jcdaohang jcdaohang = new Jcdaohang();
-
 			if (StringUtil.isNotEmpty(jcdaohangId)) {
 				jcdaohang = jcdaohangService.getJcdaohang(Integer.parseInt(jcdaohangId));
 			}

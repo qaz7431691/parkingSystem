@@ -1,19 +1,13 @@
 package com.action;
 
-import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
-
 import com.model.*;
 import com.service.*;
 import com.util.*;
@@ -24,8 +18,7 @@ public class GgtypeAction {
 	private GgtypeService ggtypeService;
 
 	@RequestMapping("/getGgtypes")
-	public void getGgtypes(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+	public void getGgtypes(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		String page = (String) request.getParameter("page");
@@ -58,18 +51,15 @@ public class GgtypeAction {
 	}
 
 	@RequestMapping("/addGgtype")
-	public void addGgtype(HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+	public void addGgtype(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		try {
 			JSONObject result = new JSONObject();
-			
 			String ggtypeName = (String) request.getParameter("ggtypeName");
 			String ggtypeMark = (String) request.getParameter("ggtypeMark");
 			String ggtypeId = (String) request.getParameter("ggtypeId");
 			Ggtype ggtype = new Ggtype();
-			
 			if (StringUtil.isNotEmpty(ggtypeId)) {
 				ggtype = ggtypeService.getGgtype(Integer.parseInt(ggtypeId));
 			}
@@ -79,14 +69,12 @@ public class GgtypeAction {
 			if (StringUtil.isNotEmpty(ggtypeMark)) {
 				ggtype.setGgtypeMark(ggtypeMark);
 			}
-
 			if (StringUtil.isNotEmpty(ggtypeId)) {
 				ggtypeService.modifyGgtype(ggtype);
 			} else {
 				ggtypeService.save(ggtype);
 			}
 			result.put("success", "true");
-
 			ResponseUtil.write(response, result);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -94,8 +82,7 @@ public class GgtypeAction {
 	}
 
 	@RequestMapping("/deleteGgtype")
-	public void deleteGgtype(HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+	public void deleteGgtype(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
 			String delIds = (String) request.getParameter("delIds");
 			System.out.println("delIds = " + delIds);
@@ -113,9 +100,7 @@ public class GgtypeAction {
 	}
 
 	@RequestMapping("/ggtypeComboList")
-	public void ggtypeComboList(HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-		
+	public void ggtypeComboList(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
 			JSONArray jsonArray = new JSONArray();
 			JSONObject jsonObject = new JSONObject();

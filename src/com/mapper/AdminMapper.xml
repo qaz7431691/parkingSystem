@@ -36,48 +36,18 @@
 	<select id="selectAll" resultMap="BaseResultMap">
 
 		select * from t_admin
-
 		WHERE 1=1
-
-
 		<if test="admin!=null">
-
-
-
 			<if test="admin.adminName!=null and admin.adminName!=''">
-
-
-
-				AND adminName = #{admin.adminName}
-
-
-
+			AND adminName = #{admin.adminName}
 			</if>
-
-
-
 			<if test="admin.adminPassword!=null and admin.adminPassword!=''">
-
-
-
 				AND adminPassword = #{admin.adminPassword}
-
-
-
 			</if>
-
-
-
 		</if>
-
 		order by adminId
-
 		<if test="rows!=0">
-
 			limit #{page},#{rows}
-
 		</if>
-
-
 	</select>
 </mapper>

@@ -56,8 +56,7 @@ public class GonggaoAction {
 	/***上传导入结束***/
 
 	@RequestMapping("/getGonggaos")
-	public void getGonggaos(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+	public void getGonggaos(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		String page = (String) request.getParameter("page");
@@ -97,8 +96,7 @@ public class GonggaoAction {
 	}
 
 	@RequestMapping("/addGonggao")
-	public void addGonggao(HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+	public void addGonggao(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		JSONObject result = new JSONObject();
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");

@@ -32,10 +32,7 @@ public class FileController {
 	@ResponseBody
 	public void fileUpload(HttpServletRequest request,
 			HttpServletResponse response) {
-//		String directory = "/upload/";
-//		//文件保存目录路径
-//		String savePath = request.getSession().getServletContext().getRealPath(directory);
-//		savePath = savePath + "/";
+
 		
 		String zhongjian = "\\WebRoot\\WEB-INF\\classes\\static\\upload/";
 		String savePath = System.getProperty("user.dir") + zhongjian;

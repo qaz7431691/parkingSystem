@@ -21,7 +21,6 @@ public class ShujuDao{
 	
 	public Shuju getShujuById(int id){
 		Shuju shuju = shujuMapper.selectByPrimaryKey(id);
-		
 		return shuju;
 	}
 

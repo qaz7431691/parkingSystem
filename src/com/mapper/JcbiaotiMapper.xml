@@ -15,12 +15,11 @@
     <result column="jcbiaotiType2" property="jcbiaotiType2" jdbcType="INTEGER" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-
     delete from t_jcbiaoti
     where jcbiaotiId = #{jcbiaotiId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.model.Jcbiaoti" >
 
+  <insert id="insert" parameterType="com.model.Jcbiaoti" >
     insert into t_jcbiaoti (jcbiaotiId, jcbiaotiName, jcbiaotiNeirong, 
       jcbiaotiMark, jcbiaotiMark1, jcbiaotiMark2, 
       jcbiaotiPaixu, jcbiaotiType, jcbiaotiType1, 

@@ -9,6 +9,7 @@
     <result column="roleMark1" property="roleMark1" jdbcType="VARCHAR" />
     <result column="roleMark2" property="roleMark2" jdbcType="INTEGER" />
   </resultMap>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
 
     delete from t_role
